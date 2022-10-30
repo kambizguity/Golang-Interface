@@ -29,9 +29,11 @@ func main() {
 	for _, obj := range shapes {
 		switch object := obj.(type) {
 		case shape.Rectangle:
-			fmt.Printf("The object is rectangle with width:%d\n, height:%d", object.Width, object.Height)
+			fmt.Printf("The object is rectangle with width:%d, height:%d\n", object.Width, object.Height)
 		case shape.Square:
 			fmt.Printf("The object is square with lenght:%d\n", object.Length)
+		default:
+			fmt.Println("Not supported type!")
 		}
 	}
 }
