@@ -1,4 +1,4 @@
-package educode
+package shape
 
 type ShapeInterface interface {
 	Area() int
@@ -9,7 +9,7 @@ type Square struct {
 }
 
 type Rectangle struct {
-	Heigth, Width int
+	Height, Width int
 }
 
 //Calculate area of squre
@@ -19,13 +19,13 @@ func (s Square) Area() int {
 
 //Calculate area of rectangle
 func (r Rectangle) Area() int {
-	return r.Heigth * r.Width
+	return r.Height * r.Width
 }
 
-//Constructor of rectangle with specific wigth and heigth
+//Constructor of rectangle with specific wigth and Height
 func NewRectangle(height, width int) Rectangle {
 	var object Rectangle
-	object.Heigth = height
+	object.Height = height
 	object.Width = width
 	return object
 }
@@ -35,4 +35,8 @@ func NewSquare(lenght int) Square {
 	var object Square
 	object.Length = lenght
 	return object
+}
+
+func CalculateArea(obj ShapeInterface) int {
+	return obj.Area()
 }
