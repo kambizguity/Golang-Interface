@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	// Interface -> Behaivior, Inheritance
 	//SECTION - I, Interface with shape object
 	var shapes []shape.ShapeInterface
 
@@ -36,4 +37,12 @@ func main() {
 			fmt.Println("Not supported type!")
 		}
 	}
+
+	//SECTION - IV, Type Assertion
+	for _, value := range shapes {
+		status, object := value.(shape.Square)
+		fmt.Printf("Object: %v\n", object)
+		fmt.Printf("Status: %v\n", status)
+	}
+
 }

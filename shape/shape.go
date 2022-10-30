@@ -1,7 +1,7 @@
 package shape
 
 type ShapeInterface interface {
-	Area() int
+	Area() int //Signiture Method
 }
 
 type Square struct {
